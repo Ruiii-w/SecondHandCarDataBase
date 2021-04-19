@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预订</title>
+</head>
+<body>
+    <form action="/search" method="post">
+        <p>房屋类型
+            <select class="select_picker" name="houseType">
+                <option value="normal">平房</option>
+                <option value="loft">复式</option>
+                <option value="villa">别墅</option>
+            </select>
+        </p>
+        <p>地区
+            <select name="area">
+                <option value="shenzhen">深圳</option>
+                <option value="college-town">深圳大学城</option>
+                <option value="Hitsz">哈尔滨工业大学深圳</option>
+            </select>
+        </p>
+        <p>最大价格<input type="text" name="maxPrice" placeholder="请输入最大价格"></p>
+        <p><button type="submit">查询</button></p>
+        <p><button type="submit" name="my-collection-list" value="collections">查看所有收藏</button></p>
+        <p><button type="submit" name="my-order-list" value="orders">查看所有订单</button></p>
+        <p><button type="submit" name="my-house-list" value="houses">查看所有房子</button></p>
+    </form>
+    <input type="button" name="Submit" onclick="javascript:history.back(-1);" value="返回登录">
+</body>
+
+<script charset="UTF-8">
+
+</script>
+</html>

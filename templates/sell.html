@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>卖房</title>
+</head>
+<body>
+    <h1>提交房型信息</h1>
+    <form action="/sell" method="post">
+        <p>房屋类型
+            <select class="select_picker" name="houseType">
+                <option value="normal">平房</option>
+                <option value="loft">复式</option>
+                <option value="villa">别墅</option>
+            </select>
+        </p>
+        <p>地区
+            <select name="area">
+                <option value="shenzhen">深圳</option>
+                <option value="college-town">深圳大学城</option>
+                <option value="Hitsz">哈尔滨工业大学深圳</option>
+            </select>
+        </p>
+        <p>期望价格<input type="text" name="expectedPrice" placeholder="请输入期望   价格"></p>
+        <p>房屋描述<input type="text" name="description" placeholder="请输入房屋简介"></p>
+        <p><button type="submit">提交</button></p>
+        <p><button type="submit" name="my-house-list" value="houses">查看所有房子</button> </p>
+    </form>
+    <input type="button" name="Submit" onclick="javascript:history.back(-1);" value="返回登录">
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>房屋列表</title>
+</head>
+<body>
+    <form action="/houses" name="houses" method="post">
+        <table style="width: 80VW" class="house-table" border="1" align="center">
+            <caption><b>二手房列表</b></caption>
+            <thead>
+                <tr>
+                    <th>
+                        房型
+                    </th>
+                    <th>
+                        状态
+                    </th>
+                    <th>
+                        地区
+                    </th>
+                    <th>
+                        价格
+                    </th>
+                    <th>
+                        描述
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody align="center">
+                {% for house in houses %}
+                <tr>
+                    <td>{{house.type_id}}</td>
+                    <td>{{house.status_id}}</td>
+                    <td>{{house.area_id}}</td>
+                    <td>{{house.price}}</td>
+                    <td>{{house.dsp}}</td>
+                    <td>
+                        <button type="submit" name="buy" value={{house.house_id}} style="width:30%">买下</button>
+                        <button type="submit" name="order" value={{house.house_id}} style="width:30%">预订</button>
+                        <button type="submit" name="collection" value={{house.house_id}} style="width:30%">收藏</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </form>
+    <input type="button" name="Submit" onclick="javascript:history.back(-1);" value="返回上一页">
+</body>
+</html>

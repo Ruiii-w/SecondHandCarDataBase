@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+
+</head>
+<body>
+<form action="/regist" method="post">
+    <p>账号<input type="text" name="user"></p>
+    <p>密码<input type="password" name="pw"></p>
+    <p>昵称<input type="text" name="nickname"></p>
+    <p>性别<input type="text" name="sex"></p>
+    <p>分类
+        <select name="userType">
+            <option value="purchaser">买家</option>
+            <option value="seller">卖家</option>
+            <option value="agency">中介</option>
+        </select>
+    </p>
+    <p>联系电话<input type="text" name="phone"></p>
+    <p><button type="submit">注册</button></p>
+</form>
+
+</body>
+</html>

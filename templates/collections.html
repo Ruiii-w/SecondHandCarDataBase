@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>收藏</title>
+</head>
+<body>
+<form action="/collection" name="collections" method="post">
+        <table style="width: 80VW" class="collection-table" border="1" align="center">
+            <caption><b>收藏列表</b></caption>
+            <thead>
+                <tr>
+                    <th>
+                        用户
+                    </th>
+                    <th>
+                        二手房
+                    </th>
+                    <th>
+                        预约时间
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody align="center">
+                {% for collection in collections %}
+                <tr>
+                    <td>{{collection.userid}}</td>
+                    <td>{{collection.house_id}}</td>
+                    <td>{{collection.ctime}}</td>
+                    <td>
+                        <button type="submit" name="delete" value={{collection.cid}} style="width:40%">删除</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </form>
+    <input type="button" name="Submit" onclick="javascript:history.back(-1);" value="返回">
+
+</body>
+</html>

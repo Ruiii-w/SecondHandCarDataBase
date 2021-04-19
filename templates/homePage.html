@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>邋里邋遢二手房销售</title>
+</head>
+<body>
+    <form action="/homePage" name="houses" method="post">
+        <table style="width: 80VW" class="house-table" border="1" align="center">
+            <caption><b>二手房列表</b></caption>
+            <thead>
+                <tr>
+                    <th>
+                        房型
+                    </th>
+                    <th>
+                        状态
+                    </th>
+                    <th>
+                        地区
+                    </th>
+                    <th>
+                        价格
+                    </th>
+                    <th>
+                        描述
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody align="center">
+                {% for house in houses %}
+                <tr>
+                    <td>{{house.type_id}}</td>
+                    <td>{{house.status_id}}</td>
+                    <td>{{house.area_id}}</td>
+                    <td>{{house.price}}</td>
+                    <td>{{house.dsp}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </form>
+    <input type="button" name="Submit" onclick="javascript:history.back(-1);" value="返回">
+</body>
+</html>
